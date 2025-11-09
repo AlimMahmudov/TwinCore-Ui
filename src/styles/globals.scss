@@ -1,0 +1,29 @@
+@use "./reset";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Inter, sans-serif;
+	@extend %unscroll;
+}
+
+.container {
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+html {
+	color-scheme: dark;
+ 
+}
+
+ 
+body {
+	background: #000;
+}

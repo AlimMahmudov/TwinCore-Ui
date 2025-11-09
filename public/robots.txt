@@ -1,0 +1,5 @@
+User-agent: *
+ 
+Allow: /
+
+Sitemap: https://next-structure-seven.vercel.app/sitemap.xml

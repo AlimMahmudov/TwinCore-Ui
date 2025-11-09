@@ -1,0 +1,23 @@
+{
+	"name": "TwinCoreUI",
+	"short_name": "TwinCoreUI",
+	"description": "",
+	"lang": "ru-RU",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
+	"icons": [
+		{
+			"src": "/alim.jpg",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "/alim.jpg",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
