@@ -48,12 +48,8 @@ const MyComponent = () => {
 };`;
 	// Примеры
  
- 
-
- 
-
 	return (
-		<div className="max-w-4xl  p-6">
+		<div className="max-w-4xl pb-24 p-6">
 			<TitleComponent>asim-phone</TitleComponent>
 			<Description className="mt-2">
 				Мощный и простой React-компонент для ввода телефонных номеров с
