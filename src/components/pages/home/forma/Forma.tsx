@@ -1,8 +1,51 @@
+'use client';
+
 import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
-import React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 const Forma = () => {
+	const [idea, setIdea] = useState<string>("");
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+
+	const TOKEN = process.env.NEXT_PUBLIC_TG_TOKEN;
+	const CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID;
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+
+		if (!idea.trim()) {
+			alert("Пожалуйста, напишите свою идею.");
+			
+			return;
+		}
+
+		if (!TOKEN || !CHAT_ID) {
+			alert("Ошибка: не заданы Telegram TOKEN или CHAT_ID.");
+			return;
+		}
+
+		setIsLoading(true);
+
+		try {
+			const message = `<b>Новое предложение с сайта TwinCoreUI</b>\n\n💡 Идея:\n${idea}`;
+			await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+				chat_id: CHAT_ID,
+				parse_mode: "html",
+				text: message,
+			});
+
+			alert("Спасибо! Ваше сообщение отправлено.");
+			setIdea("");
+		} catch (error) {
+			console.error("Ошибка отправки:", error);
+			alert("Не удалось отправить сообщение. Попробуйте позже.");
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
 	return (
 		<section id="forma" className="py-10">
 			<div className="container">
@@ -24,16 +67,27 @@ const Forma = () => {
 						вашему отзыву!
 					</Description>
 
-					<div className="flex items-center flex-col md:flex-row md:gap-0 gap-3 mt-8">
-						<input
-							type="text"
-							placeholder="Напишите свою идею здесь..."
-							className="bg-[#0c0c0c] border border-[#525252] w-full h-[46px] rounded-tl-[8px] rounded-bl-[8px] md:rounded-tr-[0px] md:rounded-br-[0px] rounded-tr-[8px] rounded-br-[8px] outline-none px-6"
-						/>
-						<button className="h-[46px] w-full md:w-[200px] rounded-tr-[8px] rounded-br-[8px] md:rounded-tl-[0px] md:rounded-bl-[0px] rounded-tl-[8px] rounded-bl-[8px] px-6 bg-white text-black">
-							Отправить
-						</button>
-					</div>
+					<form onSubmit={handleSubmit} className="w-full mt-8">
+						<div className="flex items-center flex-col md:flex-row md:gap-0 gap-3">
+							<input
+								type="text"
+								value={idea}
+								onChange={(e) => setIdea(e.target.value)}
+								placeholder="Напишите свою идею здесь..."
+								className="bg-[#0c0c0c] border border-[#525252] w-full h-[46px] rounded-tl-[8px] rounded-bl-[8px] md:rounded-tr-[0px] md:rounded-br-[0px] rounded-tr-[8px] rounded-br-[8px] outline-none px-6"
+								disabled={isLoading}
+							/>
+							<button
+								type="submit"
+								disabled={isLoading}
+								className={`h-[46px] w-full md:w-[200px] rounded-tr-[8px] rounded-br-[8px] md:rounded-tl-[0px] md:rounded-bl-[0px] rounded-tl-[8px] rounded-bl-[8px] px-6 ${
+									isLoading ? "bg-gray-600 cursor-not-allowed" : "bg-white text-black"
+								}`}
+							>
+								{isLoading ? "Отправка..." : "Отправить"}
+							</button>
+						</div>
+					</form>
 
 					<Description className="text-center mt-4">
 						Напишите любую идею или предложение — нам важно ваше мнение.

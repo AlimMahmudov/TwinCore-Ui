@@ -59,7 +59,7 @@ const BurgerMenu = ({
 					href={GITHUB_LINK}
 					target="_blank"
 					className="flex w-full justify-center ">
-					<Button className="gap-2 bg-transparent w-full max-w-[200px] hover:bg-transparent text-[#afafaf] border border-[#7e7e7e]">
+					<Button className="gap-2 bg-transparent w-full max-w-[250px] hover:bg-transparent text-[#afafaf] border border-[#7e7e7e]">
 						<IoLogoGithub size={22} color="white" /> остальные проекты
 					</Button>
 				</Link>

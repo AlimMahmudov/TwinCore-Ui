@@ -10,6 +10,7 @@ import Link from "next/link";
 import { GITHUB_LINK } from "@/constants/admin";
 import { IoLogoGithub } from "react-icons/io";
 import Button from "@/components/ui/button/Button";
+import { PAGE } from "@/config/pages/public-page.config";
 
 const Hero = () => {
 	return (
@@ -42,9 +43,9 @@ const Hero = () => {
 						</Description>
 
 						<div className="flex gap-4 justify-center mt-6">
-							<Button className="bg-[#136ed6]">
-								компоненты
-							</Button>
+							<Link href={PAGE.COMPONENTS}>
+								<Button className="bg-[#136ed6]">компоненты</Button>
+							</Link>
 							<Link href={GITHUB_LINK} target={"_blank"}>
 								<Button className={styles.secondaryButton}>
 									<IoLogoGithub size={25} /> GitHub
