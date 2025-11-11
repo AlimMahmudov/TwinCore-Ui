@@ -2,20 +2,21 @@
 import { Description } from "@/components/ui/text/Description";
 import { Title } from "@/components/ui/text/Title";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
+import { toast } from "alert-go";
 import React, { useState } from "react";
 
 const PhoneInput = () => {
 	const [installTab, setInstallTab] = useState<"npm" | "pnpm" | "bun">("npm");
 
 	const installCommands = {
-		npm: "npm install asim-phone",
-		pnpm: "pnpm add asim-phone",
-		bun: "bun add asim-phone",
+		npm: "npm install phone-go",
+		pnpm: "pnpm add phone-go",
+		bun: "bun add phone-go",
 	};
 
 	const copy = async (text: string) => {
 		await navigator.clipboard.writeText(text);
-		alert("Код скопирован!");
+		toast.success("Код скопирован!",{position: 'top-center'});
 	};
 
 	const renderInstallCode = (cmd: string) => {
@@ -30,8 +31,8 @@ const PhoneInput = () => {
 	};
 
   const tsCode = `import { useState } from 'react';
-import PhoneInput from 'asim-phone';
-import 'asim-phone/dist/asim-phone.css';
+import PhoneInput from 'phone-go';
+import 'phone-go/dist/phone-go.css';
 
 const MyComponent = () => {
   const [phone, setPhone] = useState('');
@@ -50,7 +51,7 @@ const MyComponent = () => {
  
 	return (
 		<div className="max-w-4xl pb-24 p-6">
-			<TitleComponent>asim-phone</TitleComponent>
+			<TitleComponent>phone-go</TitleComponent>
 			<Description className="mt-2">
 				Мощный и простой React-компонент для ввода телефонных номеров с
 				современным UI, поддержкой всех стран, масками, валидацией и
@@ -124,7 +125,7 @@ const MyComponent = () => {
 				</div>
 
 				<Description className="mt-3 text-sm text-gray-400">
-					⚠️ Обязательно подключите стили: <code className="bg-[#303030] px-1 rounded">import &quot;asim-phone/dist/asim-phone.css&quot;;</code>
+					⚠️ Обязательно подключите стили: <code className="bg-[#303030] px-1 rounded">import &quot;phone-go/dist/phone-go.css&quot;;</code>
 				</Description>
 			</div>
 

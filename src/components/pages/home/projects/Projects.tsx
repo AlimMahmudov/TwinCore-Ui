@@ -2,11 +2,14 @@
 import { Description } from "@/components/ui/text/Description";
 import { Title } from "@/components/ui/text/Title";
 import React, { useState } from "react";
-import PhoneInput from "asim-phone";
-import "asim-phone/dist/asim-phone.css";
+import PhoneInput from "phone-go";
+import "phone-go/dist/phone-go.css";
 import Button from "@/components/ui/button/Button";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsFillQuestionOctagonFill } from "react-icons/bs";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
+
+import { toast } from "alert-go";
+import "alert-go/dist/notifier.css";
 
 const Projects = () => {
 	const [phone, setPhone] = useState("");
@@ -41,14 +44,14 @@ const Projects = () => {
 						}}>
 						<div className="w-full h-[200px] p-4 bg-[#000000] flex items-center justify-center rounded-[13px]">
 							<PhoneInput
-								className="my-phone-input" // если хотите изменить стиль
+								className="my-phone-input"  
 								value={phone}
 								onChange={setPhone}
 								defaultCountry="KG"
 								placeholder="Введите номер"
 							/>
 						</div>
-						<Title className="text-start mt-3">React-phone</Title>
+						<Title className="text-start mt-3">PhoneGo</Title>
 						<Description className="text-start mt-2 pb-3">
 							Мощный и простой React-компонент для ввода телефонных номеров с
 							современным UI, поддержкой всех стран, масками, валидацией и
@@ -56,7 +59,7 @@ const Projects = () => {
 						</Description>
 					</div>
 
-          <div
+					<div
 						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
 						style={{
 							backgroundColor: "#242424",
@@ -66,23 +69,22 @@ const Projects = () => {
                       `,
 						}}>
 						<div className="w-full h-[200px] p-4 bg-[#000000] flex items-center justify-center rounded-[13px]">
-							<PhoneInput
-								className="my-phone-input" // если хотите изменить стиль
-								value={phone}
-								onChange={setPhone}
-								defaultCountry="KG"
-								placeholder="Введите номер"
-							/>
+							<Button className="w-full"
+								onClick={() =>
+									toast.success("Alert Go success 🚀", {
+										position: "top-center",
+									})
+								}>
+								Success
+							</Button>
 						</div>
-						<Title className="text-start mt-3">React-phone</Title>
+						<Title className="text-start mt-3">AlertGo</Title>
 						<Description className="text-start mt-2 pb-3">
-							Мощный и простой React-компонент для ввода телефонных номеров с
-							современным UI, поддержкой всех стран, масками, валидацией и
-							кастомизацией.
+						alert-go — минималистичная библиотека для создания уведомлений (toast notifications) на веб-сайтах.
 						</Description>
 					</div>
 
-          <div
+					<div
 						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
 						style={{
 							backgroundColor: "#242424",
@@ -92,23 +94,13 @@ const Projects = () => {
                       `,
 						}}>
 						<div className="w-full h-[200px] p-4 bg-[#000000] flex items-center justify-center rounded-[13px]">
-							<PhoneInput
-								className="my-phone-input" // если хотите изменить стиль
-								value={phone}
-								onChange={setPhone}
-								defaultCountry="KG"
-								placeholder="Введите номер"
-							/>
+						<BsFillQuestionOctagonFill size={60} />
 						</div>
-						<Title className="text-start mt-3">React-phone</Title>
+						<Title className="text-start mt-3">В стадии разработки</Title>
 						<Description className="text-start mt-2 pb-3">
-							Мощный и простой React-компонент для ввода телефонных номеров с
-							современным UI, поддержкой всех стран, масками, валидацией и
-							кастомизацией.
+							 Еще много креативных библиотек ждут вас впереди , буте с нами и станьте первыми кто протестирует 
 						</Description>
 					</div>
-
-          
 				</div>
 			</div>
 		</section>

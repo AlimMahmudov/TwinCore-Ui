@@ -11,7 +11,7 @@ export const EMAIL_ADDRESS = 'mahmudovasim799@gmail.com'
 export const INSTAGRAM = ''
 export const LOCATION = ''
 
-export const GITHUB = 'AsimMahmudov'
+export const GITHUB = 'AlimMahmudov'
 
 /// links/
 

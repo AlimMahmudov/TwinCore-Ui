@@ -4,11 +4,11 @@ import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import React, { useState, useEffect } from "react";
 
 const Terminal = () => {
-	const [text, setText] = useState("asim-phone");
-	const [phase, setPhase] = useState<"deleting" | "typing">("typing"); // начнём с печати asim-phone
-	const [targetIndex, setTargetIndex] = useState(0); // 0 = asim-phone, 1 = asim-toast
+	const [text, setText] = useState("phone-go");
+	const [phase, setPhase] = useState<"deleting" | "typing">("typing");  
+	const [targetIndex, setTargetIndex] = useState(0);  
 
-	const targets = ["asim-phone", "asim-toast"];
+	const targets = ["phone-go", "alert-go"];
 
 	useEffect(() => {
 		const currentTarget = targets[targetIndex];
@@ -16,28 +16,23 @@ const Terminal = () => {
 
 		if (phase === "typing") {
 			if (text.length < currentTarget.length) {
-				// Печатаем следующий символ
 				timeoutId = setTimeout(() => {
 					setText(currentTarget.slice(0, text.length + 1));
 				}, 100);
 			} else {
-				// Завершили печать — ждём, потом начнём стирать
 				timeoutId = setTimeout(() => {
 					setPhase("deleting");
 				}, 3000);
 			}
 		} else if (phase === "deleting") {
 			if (text.length > 0) {
-				// Стираем по символу
 				timeoutId = setTimeout(() => {
 					setText(text.slice(0, -1));
 				}, 80);
 			} else {
-				// Полностью стёрли — переключаем цель и начинаем печатать новую
 				const nextIndex = (targetIndex + 1) % targets.length;
 				setTargetIndex(nextIndex);
 				setPhase("typing");
-				// setText(''); // уже пусто, но можно явно сбросить
 			}
 		}
 

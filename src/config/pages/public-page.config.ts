@@ -1,6 +1,7 @@
 class PublicPage {
 	HOME = "/#home";
 	DOCS = "/docs/phone-input"
+	ALERTGO = "/docs/alert-go"
 	AUTHORS = "/#authors"
 	FORMA = "/#forma"
 	COMPONENTS = "/#componnets"

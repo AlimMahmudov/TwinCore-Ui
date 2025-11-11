@@ -4,6 +4,7 @@ import "@/styles/globals.scss";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/seo";
 import { LayoutPage } from "@/components/layout/LayoutPage";
 import Head from "./Head";
+import 'alert-go/dist/notifier.css';
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -19,7 +20,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
 	title: {
 		absolute: SITE_NAME,
-		template: `%s | ${SITE_NAME}`,
+		template: `%s | UI-Components`,
 	},
 	description: SITE_DESCRIPTION,
 	openGraph: {

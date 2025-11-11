@@ -6,8 +6,8 @@ export const menu_docs = [
 		link: PAGE.DOCS,
 	} ,
 	{
-		name: "Sonne",
-		link: PAGE.HOME,
+		name: "Alert-Go",
+		link: PAGE.ALERTGO,
 	} ,
 ];
   

@@ -1,7 +1,6 @@
 "use client";
 import { Description } from "@/components/ui/text/Description";
 import { Title } from "@/components/ui/text/Title";
-import "asim-phone/dist/asim-phone.css";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
 
 import img from "@/assets/images/english.png";

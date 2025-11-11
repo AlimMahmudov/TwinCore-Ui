@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.0",
-    "asim-phone": "1.0.4",
+    "alert-go": "^1.0.12",
     "axios": "^1.12.2",
     "next": "15.0.3",
+    "phone-go": "^1.0.4",
     "prism-react-renderer": "^2.4.1",
     "prismjs": "^1.30.0",
     "react": "19.0.0-rc-66855b96-20241106",
