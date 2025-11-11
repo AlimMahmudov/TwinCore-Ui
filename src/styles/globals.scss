@@ -20,29 +20,29 @@ body {
 
 html {
 	color-scheme: dark;
- 
 }
 
- 
 body {
 	background: #000;
 }
 
 .my-phone-input {
-  background: rgb(49, 49, 49) !important;
-  border: 1px solid rgb(71, 71, 71) !important;
-  color: white !important;
+	background: rgb(49, 49, 49) !important;
+	border: 1px solid rgb(71, 71, 71) !important;
+	color: white !important;
 
-  input {
-    color: white !important;
-    border-left: 1px solid rgb(71, 71, 71) !important;
+	input {
+		color: white !important;
+		border-left: 1px solid rgb(71, 71, 71) !important;
 		width: 100% !important;
-  }
+	}
 }
 
-
-.notify.success {
-  background: #2ba746 !important;
-  color: white !important;
+@media (max-width: 750px) {
+	.notify.success {
+		background: #2ba746 !important;
+		color: white !important;
+		width: 400px !important;
+		text-align: center;
+	}
 }
- 

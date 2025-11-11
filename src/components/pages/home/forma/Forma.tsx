@@ -4,6 +4,7 @@ import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import { useState } from "react";
 import axios from "axios";
+import { toast } from "alert-go";
 
 const Forma = () => {
 	const [idea, setIdea] = useState<string>("");
@@ -16,7 +17,7 @@ const Forma = () => {
 		e.preventDefault();
 
 		if (!idea.trim()) {
-			alert("Пожалуйста, напишите свою идею.");
+			toast.warning("Пожалуйста, напишите свою идею.");
 			
 			return;
 		}
@@ -36,7 +37,7 @@ const Forma = () => {
 				text: message,
 			});
 
-			alert("Спасибо! Ваше сообщение отправлено.");
+			toast.success("Спасибо! Ваше сообщение отправлено.",{position:"top-center"});
 			setIdea("");
 		} catch (error) {
 			console.error("Ошибка отправки:", error);

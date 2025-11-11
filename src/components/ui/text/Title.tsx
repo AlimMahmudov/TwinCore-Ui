@@ -11,7 +11,7 @@ export function Title({ children, className, ...props }: Props) {
 	return (
 		<h1
 			{...props}
-			className={twMerge("md:text-2xl text-[14px] font-[400] leading-[120%]  ", className)}>
+			className={twMerge("md:text-2xl text-[18px] font-[400] leading-[120%]  ", className)}>
 			{children}
 		</h1>
 	);
