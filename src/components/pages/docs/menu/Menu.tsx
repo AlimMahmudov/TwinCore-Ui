@@ -70,7 +70,7 @@ const Menu = () => {
 				<>
 					{/* Overlay */}
 					<div
-						className={`fixed inset-0 bg-black bg-opacity-50 z-49 md:hidden transition-opacity duration-300 ${
+						className={`fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden transition-opacity duration-300 ${
 							isClosing ? "opacity-0" : "opacity-100"
 						}`}
 						onClick={closeMenu}
@@ -78,7 +78,7 @@ const Menu = () => {
 
 					{/* Sliding menu */}
 					<aside
-						className={`fixed bottom-0 left-0 right-0 bg-[#0f0f0f] border-t border-[#303030] z-50 md:hidden rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto 
+						className={`fixed bottom-0 left-0 right-0 bg-[#0f0f0f] border-t border-[#303030] z-40 md:hidden rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto 
                             ${isClosing ? "animate-slide-down" : "animate-slide-up"}`}
 					>
 						<div className="flex justify-between items-center mb-6">

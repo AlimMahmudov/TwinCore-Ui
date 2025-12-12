@@ -37,7 +37,7 @@ const Projects = () => {
 				</div>
 				<div className=" grid md:grid-cols-3 grid-cols-1 gap-4">
 					<div
-						className="flex flex-col justify-start rounded-[12px] md:p-5 p-2 border border-[#525252]"
+						className="flex flex-col justify-start rounded-[12px] md:p-5 p-3 border border-[#525252]"
 						style={{
 							backgroundColor: "#242424",
 							backgroundImage: `
@@ -73,7 +73,7 @@ const Projects = () => {
 					</div>
 
 					<div
-						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
+						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-3 border border-[#525252]"
 						style={{
 							backgroundColor: "#242424",
 							backgroundImage: `
@@ -133,7 +133,7 @@ const Projects = () => {
 					</div>
 
 					<div
-						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
+						className="flex flex-col justify-start rounded-[12px]  md:p-5 p-3 border border-[#525252]"
 						style={{
 							backgroundColor: "#242424",
 							backgroundImage: `
@@ -146,7 +146,7 @@ const Projects = () => {
 						</div>
 						<Title className="text-start mt-3">В стадии разработки</Title>
 						<Description className="text-start mt-2 pb-3">
-							Еще много креативных библиотек ждут вас впереди , буте с нами и
+							Еще много креативных библиотек ждут вас впереди буте с нами и
 							станьте первыми кто протестирует
 						</Description>
 					</div>
