@@ -22,7 +22,7 @@ const Header = () => {
 			<div className=" px-[20px] flex justify-between items-center">
 				<div className="flex items-center gap-7">
 					<Link href={"/"}>
-						<TitleComponent className="text-white md:text-[24px] text-[22px] ">
+						<TitleComponent className="text-[#ffffff] md:text-[24px] text-[22px] ">
 							TwinCore
 						</TitleComponent>
 					</Link>

@@ -22,10 +22,10 @@ const Button: React.FC<ButtonProps> = ({
 		"flex items-center px-8 h-[42px] text-[14px] justify-center font-[500] text-white rounded-[8px] transition-all duration-200  ";
 
 	const variantClasses = {
-		primary: "bg-[#136ed6] hover:bg-[#136ed6]",
+		primary: "bg-[#136ed6]  ",
 		secondary: "bg-gray-600 hover:bg-gray-700 text-white",
 		outline:
-			"border border-[#28AC4D] text-[#28AC4D] hover:bg-[#28AC4D] hover:text-white",
+			"border border-[#28AC4D] text-[#28AC4D]  ",
 	};
 
 	const disabledClasses = disabled

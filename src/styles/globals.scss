@@ -38,11 +38,21 @@ body {
 	}
 }
 
+
+
 @media (max-width: 750px) {
 	.notify.success {
 		background: #2ba746 !important;
 		color: white !important;
-		width: 400px !important;
 		text-align: center;
+		white-space: nowrap;
 	}
+}
+
+.notify.default {
+	border: 1px solid gray !important;
+}
+
+.notify.warning {
+	color: white !important;
 }

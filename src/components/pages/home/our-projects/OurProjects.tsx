@@ -6,6 +6,8 @@ import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import img from "@/assets/images/english.png";
 import next_img from "@/assets/images/next.png";
 import nfc_img from "@/assets/images/nfc.png";
+import next_intl from "@/assets/images/next-intl.png";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +30,13 @@ const OurProjects = () => {
 			img: next_img,
 			title: "Next-Structure",
 			desc: "Быстрый старт и готовая структура на Next.js. Просто склонируйте и создавайте свои шедевры!",
-			link: "https://next-structure-seven.vercel.app/",
+			link: "https://github.com/AsimMahmudov/next-structure",
+		},
+		{
+			img: next_intl,
+			title: "Next-Structure + next-intl",
+			desc: "Быстрый старт и готовая структура на Next.js + Next-intl.",
+			link: "https://github.com/AsimMahmudov/next-structure-translate",
 		},
 	];
 	return (
@@ -46,30 +54,7 @@ const OurProjects = () => {
 					</div>
 				</div>
 				<div className=" grid md:grid-cols-2 grid-cols-1 gap-4">
-					{data.slice(0, 2).map((el, index) => (
-						<Link
-							key={index}
-							href={el.link}
-							target={"_blank"}
-							className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
-							style={{
-								backgroundColor: "#242424",
-								backgroundImage: `
-                        repeating-linear-gradient(0deg, #2c2c2c 0 1px, transparent 1px 20px),
-                        repeating-linear-gradient(90deg, #2c2c2c 0 1px, transparent 1px 20px)
-                      `,
-							}}>
-							<div className="w-full h-[300px] overflow-hidden relative bg-[#000000] flex items-center justify-center rounded-[13px]">
-								<Image fill src={el.img} alt="img" objectFit="cover" />
-							</div>
-							<Title className="text-start mt-3">{el.title}</Title>
-							<Description className="text-start mt-2">{el.desc}</Description>
-						</Link>
-					))}
-				</div>
-				
-				<div className=" grid grid-cols-1 mt-4">
-					{data.slice(2, 3).map((el, index) => (
+					{data.map((el, index) => (
 						<Link
 							key={index}
 							href={el.link}

@@ -10,12 +10,15 @@ import OurProjects from "./our-projects/OurProjects";
 const HomeComponents = () => {
 	return (
 		<>
+ 
 			<Hero />
 			<Projects/>
-			<OurProjects/>
 			<Terminal/>
+			<OurProjects/>
 			<Authors/>
 			<Forma/>
+
+			
 		</>
 	);
 };

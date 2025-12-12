@@ -29,10 +29,10 @@ const BurgerMenu = ({
 	return (
 		<div
 			id="menu-overlay"
-			className={`fixed top-0 left-0 bg-[rgba(0,0,0,0.5)] w-full h-[100vh] z-50 transition-opacity duration-700 ${
+			className={`fixed top-0 left-0 bg-transparent w-full h-[100vh] z-50 transition-opacity duration-700 ${
 				isOpen
-					? "opacity-100 pointer-events-auto"
-					: "opacity-0 pointer-events-none"
+					? "pointer-events-auto"
+					: "pointer-events-none"
 			}`}>
 			<div
 				className={`fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000] py-1 px-4 flex flex-col justify-start gap-4 shadow-lg z-50 transition-transform duration-700 ${
@@ -57,7 +57,8 @@ const BurgerMenu = ({
 							<Link
 								key={index}
 								className=" text-[16px] font-[400]"
-								href={el.link}>
+								href={el.link}
+								onClick={() => setIsOpen(false)}>
 								{el.name}
 							</Link>
 						))}
