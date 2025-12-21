@@ -11,9 +11,9 @@ interface LayoutPageProps {
 export const LayoutPage: FC<LayoutPageProps> = ({ children }) => {
 	return (
 		<div className={scss.LayoutPage}>
-			<Header />
+			{/* <Header /> */}
 			<main>{children}</main>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };

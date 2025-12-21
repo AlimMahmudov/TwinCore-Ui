@@ -3,10 +3,12 @@ import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import React, { useState, useEffect } from "react";
 
+import styles from "@/components/pages/home/hero/Hero.module.scss";
+
 const Terminal = () => {
 	const [text, setText] = useState("phone-go");
-	const [phase, setPhase] = useState<"deleting" | "typing">("typing");  
-	const [targetIndex, setTargetIndex] = useState(0);  
+	const [phase, setPhase] = useState<"deleting" | "typing">("typing");
+	const [targetIndex, setTargetIndex] = useState(0);
 
 	const targets = ["phone-go", "alert-go"];
 
@@ -41,7 +43,7 @@ const Terminal = () => {
 
 	return (
 		<div className="container">
-			<div className="max-w-2xl mx-auto my-6 text-center py-20">
+			<div className="max-w-2xl z-10 relative mx-auto my-6 text-center py-20">
 				<TitleComponent>Начните работу прямо сейчас</TitleComponent>
 				<Description className="mt-4">
 					Я разрабатываю лёгкие и удобные React-компоненты с современным UI и

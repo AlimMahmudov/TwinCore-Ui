@@ -7,10 +7,13 @@ import img from "@/assets/images/english.png";
 import next_img from "@/assets/images/next.png";
 import nfc_img from "@/assets/images/nfc.png";
 import next_intl from "@/assets/images/next-intl.png";
-
+import alim from "@/assets/images/AlimMah.png";
 
 import Image from "next/image";
 import Link from "next/link";
+import LinkButton from "@/components/ui/button/LinkButton";
+import { BsArrowRight } from "react-icons/bs";
+import { PAGE } from "@/config/pages/public-page.config";
 
 const OurProjects = () => {
 	const data = [
@@ -38,9 +41,15 @@ const OurProjects = () => {
 			desc: "Быстрый старт и готовая структура на Next.js + Next-intl.",
 			link: "https://github.com/AsimMahmudov/next-structure-translate",
 		},
+		{
+			img: alim,
+			title: "Alim's portfolio",
+			desc: "",
+			link: "https://alimmah.vercel.app/",
+		},
 	];
 	return (
-		<section id="componnets" className="md:pt-20 pt-10">
+		<section id="componnets" className="md:py-28 py-10">
 			<div className="container">
 				<div className="pb-8 flex justify-between flex-col md:flex-row items-start">
 					<div className="w-full max-w-[550px]">
@@ -52,9 +61,13 @@ const OurProjects = () => {
 							ознакомиться и попробовать сами.
 						</Description>
 					</div>
+
+					<LinkButton href={PAGE.DOCS} className="flex gap-2 md:mt-0 mt-3">
+						Исследуйте компоненты <BsArrowRight size={16} />
+					</LinkButton>
 				</div>
 				<div className=" grid md:grid-cols-2 grid-cols-1 gap-4">
-					{data.map((el, index) => (
+					{data.slice(0, 4).map((el, index) => (
 						<Link
 							key={index}
 							href={el.link}
@@ -67,7 +80,29 @@ const OurProjects = () => {
                         repeating-linear-gradient(90deg, #2c2c2c 0 1px, transparent 1px 20px)
                       `,
 							}}>
-							<div className="w-full h-[300px] overflow-hidden relative bg-[#000000] flex items-center justify-center rounded-[13px]">
+							<div className="w-full md:h-[300px] h-[250px] overflow-hidden relative bg-[#000000] flex items-center justify-center rounded-[13px]">
+								<Image fill src={el.img} alt="img" objectFit="cover" />
+							</div>
+							<Title className="text-start mt-3">{el.title}</Title>
+							<Description className="text-start mt-2">{el.desc}</Description>
+						</Link>
+					))}
+				</div>
+				<div className=" grid   grid-cols-1 gap-4 mt-4">
+					{data.slice(4).map((el, index) => (
+						<Link
+							key={index}
+							href={el.link}
+							target={"_blank"}
+							className="flex flex-col justify-start rounded-[12px]  md:p-5 p-2 border border-[#525252]"
+							style={{
+								backgroundColor: "#242424",
+								backgroundImage: `
+                        repeating-linear-gradient(0deg, #2c2c2c 0 1px, transparent 1px 20px),
+                        repeating-linear-gradient(90deg, #2c2c2c 0 1px, transparent 1px 20px)
+                      `,
+							}}>
+							<div className="w-full md:h-[500px] h-[250px] overflow-hidden relative bg-[#000000] flex items-center justify-center rounded-[13px]">
 								<Image fill src={el.img} alt="img" objectFit="cover" />
 							</div>
 							<Title className="text-start mt-3">{el.title}</Title>

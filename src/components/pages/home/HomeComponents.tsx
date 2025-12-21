@@ -5,20 +5,18 @@ import Terminal from "./terminal/Terminal";
 import Forma from "./forma/Forma";
 import Projects from "./projects/Projects";
 import OurProjects from "./our-projects/OurProjects";
-
+import GoogleExtensions from "./google-extensions/GoogleExtensions";
 
 const HomeComponents = () => {
 	return (
 		<>
- 
 			<Hero />
 			<Projects/>
 			<Terminal/>
+			<GoogleExtensions/>
 			<OurProjects/>
 			<Authors/>
 			<Forma/>
-
-			
 		</>
 	);
 };

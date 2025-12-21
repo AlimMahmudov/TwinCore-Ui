@@ -56,7 +56,14 @@ const Hero = () => {
 
 					<div className={styles.image}>
 						<div className={styles.imgbox}>
-							<Image className="object-cover" src={img} alt="img" fill />
+							<video
+								src="/code.mov"
+								autoPlay
+								muted
+								loop
+								playsInline
+								className={styles.video}
+							/>
 						</div>
 					</div>
 				</div>
