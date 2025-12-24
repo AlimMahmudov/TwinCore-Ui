@@ -140,7 +140,7 @@ const Authors = () => {
 							<div className="absolute w-3 h-3 rounded-full bg-blue-500 -left-[7px] top-1"></div>
 
 							<h3 className="text-lg font-semibold text-gray-200">
-								Motion Studio — Frontend-разработчик
+							BIR DIGITAL — Frontend-разработчик
 							</h3>
 							<p className="text-gray-500 text-sm">
 								Бишкек, Кыргызстан • 13.01.2024 – 25.03.2025

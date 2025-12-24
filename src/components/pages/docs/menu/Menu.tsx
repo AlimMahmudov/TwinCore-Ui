@@ -1,6 +1,6 @@
 "use client";
 
-import { menu_docs } from "@/lib/menu_docs";
+import { menu_docs, menu_hrome, menu_Pro } from "@/lib/menu_docs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -34,13 +34,55 @@ const Menu = () => {
 			<aside className="hidden md:block md:w-[300px] bg-[#0f0f0f] border-r border-[#303030]">
 				<div className="p-4 sticky top-[80px]">
 					<h2 className="text-lg font-semibold mb-4">Документация</h2>
-					<div className="flex gap-1 flex-col mt-10">
+					<div className="flex gap-1 flex-col mt-4">
 						{menu_docs.map((el, index) => {
 							const isActive = pathname === el.link;
 							return (
 								<Link
 									key={index}
 									href={el.link}
+									className={`w-full p-2 rounded transition-colors ${
+										isActive
+											? "bg-[#2a2a2a] text-white font-medium"
+											: "text-gray-300 hover:bg-[#22222288]"
+									}`}>
+									{el.name}
+								</Link>
+							);
+						})}
+					</div>
+
+					<h2 className="text-lg font-semibold mb-4 mt-10">
+						Chrome-расширения
+					</h2>
+					<div className="flex gap-1 flex-col mt-4">
+						{menu_hrome.map((el, index) => {
+							const isActive = pathname === el.link;
+							return (
+								<Link
+									key={index}
+									href={el.link}
+									target={"_blank"}
+									className={`w-full p-2 rounded transition-colors ${
+										isActive
+											? "bg-[#2a2a2a] text-white font-medium"
+											: "text-gray-300 hover:bg-[#22222288]"
+									}`}>
+									{el.name}
+								</Link>
+							);
+						})}
+					</div>
+
+					<h2 className="text-lg font-semibold mb-4 mt-10">Наши проекты</h2>
+					<div className="flex gap-1 flex-col mt-4">
+						{menu_Pro.map((el, index) => {
+							const isActive = pathname === el.link;
+							return (
+								<Link
+									key={index}
+									href={el.link}
+									target={"_blank"}
 									className={`w-full p-2 rounded transition-colors ${
 										isActive
 											? "bg-[#2a2a2a] text-white font-medium"
@@ -79,8 +121,11 @@ const Menu = () => {
 					{/* Sliding menu */}
 					<aside
 						className={`fixed bottom-0 left-0 right-0 bg-[#0f0f0f] border-t border-[#303030] z-40 md:hidden rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto 
-                            ${isClosing ? "animate-slide-down" : "animate-slide-up"}`}
-					>
+                            ${
+															isClosing
+																? "animate-slide-down"
+																: "animate-slide-up"
+														}`}>
 						<div className="flex justify-between items-center mb-6">
 							<h2 className="text-lg font-semibold">Документация</h2>
 							<button
@@ -90,23 +135,66 @@ const Menu = () => {
 							</button>
 						</div>
 
-						<div className="flex flex-col gap-2 h-[500px]">
-							{menu_docs.map((el, index) => {
-								const isActive = pathname === el.link;
-								return (
-									<Link
-										key={index}
-										href={el.link}
-										onClick={closeMenu}
-										className={`w-full p-3 rounded transition-colors text-center ${
-											isActive
-												? "bg-[#2a2a2a] text-white font-medium"
-												: "text-gray-300 hover:bg-[#272727]"
-										}`}>
-										{el.name}
-									</Link>
-								);
-							})}
+						<div className="flex flex-col gap-2 h-[700px]">
+							<div className="flex gap-1 flex-col mt-4">
+								{menu_docs.map((el, index) => {
+									const isActive = pathname === el.link;
+									return (
+										<Link
+											key={index}
+											href={el.link}
+											className={`w-full p-2 rounded transition-colors ${
+												isActive
+													? "bg-[#2a2a2a] text-white font-medium"
+													: "text-gray-300 hover:bg-[#22222288]"
+											}`}>
+											{el.name}
+										</Link>
+									);
+								})}
+							</div>
+
+							<h2 className="text-lg font-semibold mb-4 mt-10">
+								Chrome-расширения
+							</h2>
+							<div className="flex gap-1 flex-col mt-4">
+								{menu_hrome.map((el, index) => {
+									const isActive = pathname === el.link;
+									return (
+										<Link
+											key={index}
+											href={el.link}
+											target={"_blank"}
+											className={`w-full p-2 rounded transition-colors ${
+												isActive
+													? "bg-[#2a2a2a] text-white font-medium"
+													: "text-gray-300 hover:bg-[#22222288]"
+											}`}>
+											{el.name}
+										</Link>
+									);
+								})}
+							</div>
+
+							<h2 className="text-lg font-semibold mb-4 mt-10">Наши проекты</h2>
+							<div className="flex gap-1 flex-col mt-4">
+								{menu_Pro.map((el, index) => {
+									const isActive = pathname === el.link;
+									return (
+										<Link
+											key={index}
+											href={el.link}
+											target={"_blank"}
+											className={`w-full p-2 rounded transition-colors ${
+												isActive
+													? "bg-[#2a2a2a] text-white font-medium"
+													: "text-gray-300 hover:bg-[#22222288]"
+											}`}>
+											{el.name}
+										</Link>
+									);
+								})}
+							</div>
 						</div>
 					</aside>
 				</>

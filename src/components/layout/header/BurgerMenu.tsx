@@ -65,14 +65,7 @@ const BurgerMenu = ({
 						<Link className=" text-[16px] font-[400]" href={PAGE.AUTHORS}>
 							Авторы
 						</Link>
-						{menu_docs.map((el, index) => (
-							<Link
-								key={index}
-								className=" text-[16px] font-[400]"
-								href={el.link}>
-								{el.name}
-							</Link>
-						))}
+						 
 					</div>
 
 					<div className="flex flex-col gap-3 md:items-end items-center">

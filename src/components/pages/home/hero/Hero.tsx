@@ -19,27 +19,14 @@ const Hero = () => {
 				<div className={styles.container}>
 					<div className={styles.text}>
 						<TitleComponent className="md:!text-[50px] !text-[28px] flex flex-wrap items-center justify-center gap-3">
-							Современные UI-компоненты, созданные с помощью
-							{/* React */}
-							<div className="flex">
-								<span className="bg-[#00a2ff]   border border-white rounded-full p-2 w-[50px] h-[50px] flex justify-center items-center">
-									<FaReact size={34} />
-								</span>
-
-								<span className="bg-[#1b91d6] -ml-2  border border-white rounded-full p-2 w-[50px] h-[50px] flex justify-center items-center">
-									<RiTailwindCssFill size={34} />
-								</span>
-
-								<span className="bg-[#0051ff] -ml-2  border border-white rounded-full p-2 w-[50px] h-[50px] flex justify-center items-center">
-									<SiTypescript size={28} />
-								</span>
-							</div>
+							Современные npm-библиотеки, веб-проекты и Chrome-расширения
 						</TitleComponent>
 
 						<Description className="mt-4">
-							Компоненты разработаны с использованием современных технологий.
-							Они обеспечивают высокую скорость разработки, гибкую кастомизацию
-							и стабильную работу в production.
+							Мы разрабатываем npm-библиотеки, полноценные веб-проекты и
+							Chrome-расширения — от идеи до production. Фокус на
+							производительности, удобстве использования и чистой архитектуре
+							кода.
 						</Description>
 
 						<div className="flex gap-4 justify-center mt-6">
