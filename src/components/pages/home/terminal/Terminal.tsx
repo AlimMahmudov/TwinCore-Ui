@@ -44,10 +44,10 @@ const Terminal = () => {
 	return (
 		<div className="container">
 			<div className="max-w-2xl z-10 relative mx-auto my-6 text-center py-20">
-				<TitleComponent>Начните работу прямо сейчас</TitleComponent>
+				<TitleComponent>Установите за секунду</TitleComponent>
 				<Description className="mt-4">
-					Я разрабатываю лёгкие и удобные React-компоненты с современным UI и
-					минимальными зависимостями.
+				Простые, лёгкие и готовые к production решению для Next.js и React.
+				Без лишних зависимостей — только то, что нужно.
 				</Description>
 				<div className="rounded-lg overflow-hidden shadow-lg font-mono mt-10 text-sm md:text-base bg-black border border-gray-800">
 					<div className="bg-gray-900 flex items-center justify-between px-3 py-2 border-b border-gray-800">

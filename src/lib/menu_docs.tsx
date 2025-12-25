@@ -24,6 +24,10 @@ export const menu_hrome = [
 
 export const menu_Pro = [
 	{
+		name: "Alert-Go Playground",
+		link: PAGE.ALERT_GO_PLAYGROUND,
+	},
+	{
 		name: "Scan-NFC",
 		link: PAGE.SCAN_NFC,
 	},

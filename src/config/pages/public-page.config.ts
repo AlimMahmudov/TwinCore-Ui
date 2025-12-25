@@ -10,6 +10,7 @@ class PublicPage {
 	SEO_GO = "https://chromewebstore.google.com/detail/seo-go/dajnjejkmlocjlnbafagagbaeopehjff?hl=ru&utm_source=ext_sidebar"
 
 	SCAN_NFC = "https://scan-nfc-gamma.vercel.app/"
+	ALERT_GO_PLAYGROUND = "https://scan-nfc-gamma.vercel.app/"
 	PORTFOLIO = "https://alimmah.vercel.app/"
 	NEXT_STRUCTURE = "https://github.com/AsimMahmudov/next-structure"
 	NEXT_INTL_STRUCTURE = "https://github.com/AsimMahmudov/next-structure-translate"
